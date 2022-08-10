@@ -1,0 +1,389 @@
+
+/* body {
+    background: #F9FAFF;
+    background-image: url(./images/pattern-circles.svg), url(./images/bg-pattern.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-size: 146px 145px, cover;
+    background-position: 50% 3.75rem, top;
+    image-orientation: calc();
+} */
+
+body {
+  background: #F9FAFF;
+  padding: 4.313rem 1.563rem 1.563rem 1.563rem;
+  margin: 0;
+}
+
+
+/* slider styling starts here*/
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 2.688rem;
+  height: 1.375rem;
+}
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 0.875rem;
+    width: 0.875rem;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+  input:checked + .slider {
+    background-color: #7AEADF;;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 2.125rem;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  /* slider styling ends here*/
+
+.bg-pattern {
+    background-image: url(./images/pattern-circles.svg);
+    background-repeat: no-repeat;
+    background-size: 146px 145px;
+    background-position: 50% 3.75rem;
+    position: absolute;
+    width: 100%;
+    height: 25rem;
+    background-color: #F1F5FE;
+    border-radius: 0px 0px 0px 191.5px;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+main {
+    z-index: 100;
+}
+
+.header-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-title {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 27px;
+  text-align: center;
+  margin-bottom: 0.313rem;
+  color: #293356;
+  
+}
+
+.sign-up {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 23px;
+  margin-top: 0;
+  margin-bottom: 4rem;
+  text-align: center;
+  color: #848EAD;
+  width: 60%;
+}
+
+.range-container {
+  width: 89%;
+  padding: 1.1rem;
+}
+
+/* range slider styling starts here*/
+
+.slidecontainer {
+  width: 100%;
+}
+
+
+
+.slider-range {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #A4F3EB 52.3047%, #ECF0FB 52.3047%);
+   outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider-range:hover {
+  opacity: 1;
+}
+
+.slider-range::-webkit-slider-thumb {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  background-image: url(./images/icon-slider.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 50%;
+  background-color: #10D8C4;
+  cursor: pointer;
+  z-index: 2;
+  box-shadow: 0px 15px 30px rgba(0, 255, 231, 0.6);
+}
+
+.slider-range::-webkit-slider-thumb:hover {
+  background-color: #7AEADF;
+  box-shadow: 0px 15px 30px rgba(0, 255, 231, 0.6);
+}
+
+/* range slider styling ends here*/
+
+.card-container {
+  display: flex;
+  background: #FFFFFF;
+  box-shadow: 0px 20px 30px -5px rgb(127 137 185 / 15%);
+  border-radius: 8px;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  /* padding: 1.5rem;
+  */
+} 
+
+.pageviews {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 1.71429px;
+  text-transform: uppercase;
+  color: #848EAD;
+}
+
+.price-month {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#price-output {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 55px;
+  /* identical to box height */
+  text-align: right;
+  letter-spacing: -1px;
+  color: #293356;
+}
+
+.month-output {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: center;
+  color: #848EAD;
+}
+
+.billing-container {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.monthly-billing, .yearly-billing {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: #848EAD;
+}
+
+.percent-billing, .hide-discount {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 10px;
+  line-height: 14px;
+  text-align: center;
+  background: #FEEDE8;
+  border-radius: 9.5px;
+  color: #FF8D68;
+}
+
+.hide-discount {
+  display: none;
+}
+
+
+
+.line-bottom {
+  margin-top: 2rem;
+  width: 100%;
+  border-bottom: 1px solid #ECF0FB;
+}
+
+ul {
+  padding: 0;
+  text-align: center;
+}
+
+li{
+  padding-bottom: 1rem;
+  list-style-image:URL(./images/icon-check.svg);
+  list-style-position: inside;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  color: #848EAD;
+}
+
+.button-start {
+  padding: 1rem 3rem;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: #BECDFF;
+  background: #293356;
+  border-radius: 20.5px;
+  margin-bottom: 2rem;
+  border: none;
+  cursor: pointer;
+}
+
+.button-start:hover {
+  font-family: 'Manrope';
+font-style: normal;
+font-weight: 800;
+font-size: 12px;
+line-height: 16px;
+text-align: center;
+
+color: #FFFFFF;
+}
+
+@media only screen and (max-width: 1900px) and (min-width: 1200px) {
+
+  body {
+    background: #F9FAFF;
+    padding: 4.313rem 1.563rem 1.563rem 1.563rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main {
+  width: 33.75rem;
+  z-index: 100;
+}
+
+.range-container {
+  display: grid;
+  grid-template-areas:
+      "b c c"
+      "b c c"
+      "a a a";
+  width: 89%;
+  padding: 1.1rem;
+  align-items: center;
+}
+
+.pageviews {
+  grid-area: b;
+}
+
+.slidecontainer {
+  grid-area: a;
+}
+
+.price-month {
+  grid-area: c;
+}
+
+.billing-container {
+  justify-content: flex-end;
+}
+
+.switch, .yearly-billing, .discount {
+  margin-left: 1rem;
+}
+
+.hide-discount {
+  display: inline;
+}
+
+.button-container {
+  width: 89%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul {
+  padding: 0;
+  text-align: left;
+}
+
+.button-start {
+  width: 10.625rem;
+  height: 2.563rem;
+  padding: 0;
+}
+
+}

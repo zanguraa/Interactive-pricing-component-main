@@ -3,37 +3,86 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <link rel="stylesheet" href="./style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Interactive pricing component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+  <title>Interactive pricing component</title>
 </head>
 <body>
 
-  Simple, traffic-based pricing
-  Sign-up for our 30-day trial. No credit card required. 
-
-  Pageviews
-  $ /month
-
-  Monthly Billing
-  Yearly Billing 25% discount
-
-  Unlimited websites
-  100% data ownership
-  Email reports
-
-  Start my trial
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+  <div class="bg-pattern">
   </div>
+
+  <main>
+    <div class="header-info">
+      <h2 class="header-title">
+        Simple, traffic-based pricing</h2>
+      <h4 class="sign-up">
+        Sign-up for our 30-day trial. No credit card required. 
+      </h4>
+    </div>
+
+    <section class="card-container">
+      <div class="range-container">
+        <h2 class="pageviews" id="page-views">
+          <span>100</span>K Pageviews</h2>
+            
+        <div class="slidecontainer">
+          <input  type="range" min="1" max="100" value="50"  class="slider-range" id="myRange">
+          <p>Value: <span id="demo"></span></p>
+        </div>
+        <div class="price-month">
+          <h1 id="price-output">
+             $ 16.00
+          </h1> 
+          <span class="month-output">
+            /month
+          </span>
+        </div>
+     </div>
+     <div class="billing-container">
+      <span class="monthly-billing">
+        Monthly Billing
+      </span> 
+      <label class="switch">
+        <input type="checkbox">
+        <span class="slider round">
+        </span>
+      </label>
+      <span class="yearly-billing">
+        Yearly Billing
+      </span>  
+      <div class="discount">
+        <span class="percent-billing">
+          -25% 
+          <span class="hide-discount">
+            discount
+          </span>
+        </span> 
+      </div> 
+      </div>
+      <div class="line-bottom">
+      </div>
+      <div class="button-container">
+      <ul>
+        <li>
+          Unlimited websites
+        </li>
+        <li>
+          100% data ownership
+        </li>
+        <li>
+          Email reports
+        </li>
+      </ul>
+      <button class="button-start">
+      Start my trial
+      </button>
+      </div>
+    </section>
+  </main>
+  <script src="./script.js"></script>
 </body>
 </html>
