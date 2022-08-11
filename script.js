@@ -2,7 +2,8 @@ let slider = document.querySelector('.switch');
 let priceMonth = document.querySelector('.month-output');
 const pageViews = document.getElementById('page-views');
 const price = document.getElementById('price-output');
-
+const checkBox = document.getElementById('checkbox-checked');
+console.log(checkBox);
 let valueCount = 8;
 
 const rangeBackground = document.getElementById("myRange").oninput = function() {
@@ -11,26 +12,50 @@ const rangeBackground = document.getElementById("myRange").oninput = function() 
 
     
     valueCount = +this.value;
-    console.log(typeof valueCount);
+   
+    let count = valueCount * 12;
+     
+    let result = count - (count * 0.25);
+
+        console.log(checkBox.checked);
     if(this.value == 0) {
+        
         pageViews.firstElementChild.innerHTML = '0';
         price.innerHTML = `0$`;
     }
     if(this.value == 8) {
-        pageViews.firstElementChild.innerHTML = '10';
-        price.innerHTML = `${this.value}$`;
+        if(checkBox.checked) {
+            pageViews.firstElementChild.innerHTML = '10';
+            price.innerHTML = `${result}$`;
+        } else {
+            pageViews.firstElementChild.innerHTML = '10';
+            price.innerHTML = `${this.value}$`;}
+        
     }
     if(this.value == 12) {
-        pageViews.firstElementChild.innerHTML = '50';
-        price.innerHTML = `${this.value}$`;
+        if(checkBox.checked) {
+            console.log("imhere")
+            pageViews.firstElementChild.innerHTML = '50';
+            price.innerHTML = `${result}$`;
+        } else {
+            pageViews.firstElementChild.innerHTML = '50';
+            price.innerHTML = `${this.value}$`;}
     }
     if(this.value == 24) {
-        pageViews.firstElementChild.innerHTML = '100';
-        price.innerHTML = `${this.value}$`;
+        if(checkBox.checked) {
+            pageViews.firstElementChild.innerHTML = '100';
+            price.innerHTML = `${result}$`;
+        } else {
+            pageViews.firstElementChild.innerHTML = '100';
+            price.innerHTML = `${this.value}$`;}
     }
     if(this.value == 36) {
-        pageViews.firstElementChild.innerHTML = '1000';
-        price.innerHTML = `${this.value}$`;
+        if(checkBox.checked) {
+            pageViews.firstElementChild.innerHTML = '1000';
+            price.innerHTML = `${result}$`;
+        } else {
+            pageViews.firstElementChild.innerHTML = '1000';
+            price.innerHTML = `${this.value}$`;}
     }
 
     
@@ -39,11 +64,11 @@ const rangeBackground = document.getElementById("myRange").oninput = function() 
   
   let sliderCounter = 0;
   slider.addEventListener('input', (event)=> {
-    console.log(valueCount);
-     let count = valueCount * 12;
+    let count = valueCount * 12;
      
     let result = count - (count * 0.25);
-    console.log(result, count, valueCount);
+    
+    
     if(!event.target.checked) {
         priceMonth.innerHTML = "/month";
         price.innerHTML = `${valueCount}$`;
