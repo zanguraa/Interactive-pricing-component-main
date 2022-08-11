@@ -1,4 +1,4 @@
-# Frontend Mentor - Interactive pricing component
+# Interactive pricing component [check live code here](https://zanguraa.github.io/Interactive-pricing-component-main/)
 
 ![Design preview for the Interactive pricing component coding challenge](./design/desktop-preview.jpg)
 
